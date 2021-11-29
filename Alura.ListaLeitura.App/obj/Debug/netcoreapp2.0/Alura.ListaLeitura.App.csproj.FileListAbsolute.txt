@@ -1,0 +1,11 @@
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.deps.json
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.runtimeconfig.json
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.runtimeconfig.dev.json
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.dll
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.csprojAssemblyReference.cache
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.csproj.CoreCompileInputs.cache
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.AssemblyInfoInputs.cache
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.AssemblyInfo.cs
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.pdb
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.dll
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.pdb
