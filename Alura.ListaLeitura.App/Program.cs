@@ -11,11 +11,12 @@ namespace Alura.ListaLeitura.App
         {
             var _repo = new LivroRepositorioCSV();
 
-			IWebHost host = new WebHostBuilder()
-				.UseKestrel()
-				.UseStartup<Startup>()
-				.Build();
-			host.Run();
+            IWebHost host = new WebHostBuilder()
+                .UseKestrel()
+                .UseStartup<Startup>()
+                .Build();
+
+            host.Run();
 
             //ImprimeLista(_repo.ParaLer);
             //ImprimeLista(_repo.Lendo);
