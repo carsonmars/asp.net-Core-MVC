@@ -24,14 +24,14 @@ namespace Alura.ListaLeitura.App.Logica
             return conteudoArquivo = conteudoArquivo.Replace("#NOVO-ITEM#", "");
         }
 
-        public static Task Detalhes(HttpContext context)
+        public string Detalhes(int id)
         {
             //Pega informações contidas na rota.
-            int id = Convert.ToInt32(context.GetRouteValue("id"));
+            //int id = Convert.ToInt32(context.GetRouteValue("id"));
             var repo = new LivroRepositorioCSV();
 
             var livro = repo.Todos.First(l => l.Id == id);
-            return context.Response.WriteAsync(livro.Detalhes());
+            return livro.Detalhes();
         }
 
        
