@@ -11,6 +11,4 @@ E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura
 E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.pdb
 E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Repositorio\livros.csv
 E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\html\formulario.html
-E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\html\para-ler.html
-E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\html\lendo.html
-E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\html\lidos.html
+E:\repoGit\asp.net-Core-MVC\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\html\lista.html

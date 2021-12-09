@@ -12,16 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="html\formulario.html">
+    <None Update="Html\formulario.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="html\lidos.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="html\lendo.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="html\para-ler.html">
+    <None Update="Html\lista.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Repositorio\livros.csv">
