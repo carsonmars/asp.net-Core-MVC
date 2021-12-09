@@ -14,7 +14,7 @@ namespace Alura.ListaLeitura.App.Logica
 {
     public class CadastroLogica
     {
-        public static Task ProcessaFormulario(HttpContext context)
+        public static Task Incluir(HttpContext context)
         {
             var livro = new Livro()
             {
@@ -40,7 +40,7 @@ namespace Alura.ListaLeitura.App.Logica
         }
 
         //Método para inserir um novo livro na Lista.
-        public static Task NovoLivroParaLer(HttpContext context)
+        public static Task NovoLivro(HttpContext context)
         {
             var livro = new Livro()
             {
