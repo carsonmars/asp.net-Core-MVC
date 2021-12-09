@@ -12,6 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="html\formulario.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Repositorio\livros.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -29,14 +30,51 @@ namespace Alura.ListaLeitura.App
             builder.MapRoute("Cadastro/NovoLivro/{Nome}/{autor}", NovoLivroParaLer);
                                                //Faz com que só receba id inteiro.
             builder.MapRoute("Livros/Detalhes/{id:int}", ExibeDetalhes);
+            builder.MapRoute("Cadastro/NovoLivro", ExibeFormulario);
+            builder.MapRoute("Cadastro/Incluir", ProcessaFormulario);
             var rotas = builder.Build();
             app.UseRouter(rotas);
 
             //app.Run(Roteamento);
         }
 
+        private Task ProcessaFormulario(HttpContext context)
+        {
+            var livro = new Livro()
+            {
+                //To pegando da Query que fica na URL >> método GET.
+                //Titulo = context.Request.Query["titulo"].First(),
+                //Autor = context.Request.Query["autor"].First(),
+                
+                //To pegando a informação que fica no Form >> método POST.
+                Titulo = context.Request.Form["titulo"].First(),
+                Autor = context.Request.Form["autor"].First(),
+            };
+
+            var repo = new LivroRepositorioCSV();
+            repo.Incluir(livro);
+            return context.Response.WriteAsync("O livro foi adicionado com sucesso.");
+        }
+
+        private Task ExibeFormulario(HttpContext context)
+        {
+            var html = CarregaArquivoHTML("formulario");
+            return context.Response.WriteAsync(html);
+
+        }
+
+        private string CarregaArquivoHTML(string nomeArquivo)
+        {
+            var nomeCompletoArquivo = $"html/{nomeArquivo}.html";
+            using (var arquivo = File.OpenText(nomeCompletoArquivo))
+            {
+                return arquivo.ReadToEnd();
+            }
+        }
+
         public Task ExibeDetalhes(HttpContext context)
         {
+                                               //Pega informações contidas na rota.
             int id = Convert.ToInt32(context.GetRouteValue("id"));
             var repo = new LivroRepositorioCSV();
 
