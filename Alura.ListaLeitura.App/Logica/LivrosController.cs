@@ -1,4 +1,4 @@
-﻿using Alura.ListaLeitura.App.HTML;
+﻿using Alura.ListaLeitura.App.Html;
 using Alura.ListaLeitura.App.Negocio;
 using Alura.ListaLeitura.App.Repositorio;
 using Microsoft.AspNetCore.Http;
@@ -12,51 +12,55 @@ using System.Threading.Tasks;
 
 namespace Alura.ListaLeitura.App.Logica
 {
-    public class LivrosController
+    public class LivrosControllercs
     {
-        private static string CarregaLista(IEnumerable<Livro> livros)
+
+        public static string CarregaLista(IEnumerable<Livro> livros)
         {
             var conteudoArquivo = HtmlUtils.CarregaArquivoHTML("lista");
+
             foreach (var livro in livros)
             {
-                conteudoArquivo = conteudoArquivo
-                    .Replace("#NOVO-ITEM#", $"<li>{livro.Titulo} - {livro.Autor}</li>#NOVO-ITEM#");
+                conteudoArquivo = conteudoArquivo.Replace("#NOVO-ITEM#", $"<li>{livro.Titulo} - {livro.Autor}</li> #NOVO-ITEM#");
             }
-            return conteudoArquivo.Replace("#NOVO-ITEM#", "");
+            return conteudoArquivo = conteudoArquivo.Replace("#NOVO-ITEM#", "");
         }
 
-        public static Task LivrosParaLer(HttpContext context)
+        public static Task Detalhes(HttpContext context)
+        {
+            //Pega informações contidas na rota.
+            int id = Convert.ToInt32(context.GetRouteValue("id"));
+            var repo = new LivroRepositorioCSV();
+
+            var livro = repo.Todos.First(l => l.Id == id);
+            return context.Response.WriteAsync(livro.Detalhes());
+        }
+
+       
+        public static Task ParaLer(HttpContext context)
         {
             var _repo = new LivroRepositorioCSV();
             var html = CarregaLista(_repo.ParaLer.Livros);
             return context.Response.WriteAsync(html);
         }
 
-        public static Task LivrosLendo(HttpContext context)
+        public static Task Lendo(HttpContext context)
         {
             var _repo = new LivroRepositorioCSV();
             var html = CarregaLista(_repo.Lendo.Livros);
             return context.Response.WriteAsync(html);
         }
 
-        public static Task LivrosLidos(HttpContext context)
+        public static Task Lidos(HttpContext context)
         {
             var _repo = new LivroRepositorioCSV();
             var html = CarregaLista(_repo.Lidos.Livros);
             return context.Response.WriteAsync(html);
         }
 
-        public string Detalhes(int id)
-        {
-            var repo = new LivroRepositorioCSV();
-            var livro = repo.Todos.First(l => l.Id == id);
-            return livro.Detalhes();
-        }
-
         public string Teste()
         {
-            return "nova funcionalidade implementada";
+            return "Nova funcionalidade foi implementada";
         }
-
     }
 }
